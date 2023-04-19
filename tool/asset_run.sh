@@ -1,6 +1,6 @@
-#!/bin/bash 
+#!/bin/bash
 
-function usage() 
+function usage()
 {
     echo " Usage : "
     echo "   bash asset_run.sh deploy"
@@ -37,5 +37,5 @@ function usage()
             ;;
     esac
 
-    java -Djdk.tls.namedGroups="SM2,secp256k1,x25519,secp256r1,secp384r1,secp521r1" -cp 'apps/*:conf/:lib/*' org.fisco.bcos.asset.client.AssetClient $@
-
+    # shellcheck disable=SC2068
+    java -Djdk.tls.namedGroups="secp256k1" -cp 'apps/*:conf/:lib/*' org.fisco.bcos.asset.client.AssetClient $@
