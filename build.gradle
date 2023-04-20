@@ -34,8 +34,8 @@ dependencies {
 }
 
 jar {
-    destinationDir file('dist/apps')
-    archiveName project.name + '.jar'
+    destinationDirectory = file("dist/apps")
+    archiveBaseName = 'assent-app.jar'
     exclude '**/*.xml'
     exclude '**/*.properties'
     exclude '**/*.crt'
