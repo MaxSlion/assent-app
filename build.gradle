@@ -43,7 +43,7 @@ jar {
 
     doLast {
         copy {
-            from configurations.runtime
+            from configurations.runtimeClasspath
             into 'dist/lib'
         }
         copy {
